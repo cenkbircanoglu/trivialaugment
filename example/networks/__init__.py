@@ -5,13 +5,13 @@ from torch.nn import DataParallel
 import torch.backends.cudnn as cudnn
 # from torchvision import models
 
-from TrivialAugment.networks.resnet import ResNet
-from TrivialAugment.networks.shakeshake.shake_resnet import ShakeResNet
-from TrivialAugment.networks.wideresnet import WideResNet
-from TrivialAugment.networks.shakeshake.shake_resnext import ShakeResNeXt
-from TrivialAugment.networks.convnet import SeqConvNet
-from TrivialAugment.networks.mlp import MLP
-from TrivialAugment.common import apply_weightnorm
+from trivialaugment.networks.resnet import ResNet
+from trivialaugment.networks.shakeshake.shake_resnet import ShakeResNet
+from trivialaugment.networks.wideresnet import WideResNet
+from trivialaugment.networks.shakeshake.shake_resnext import ShakeResNeXt
+from trivialaugment.networks.convnet import SeqConvNet
+from trivialaugment.networks.mlp import MLP
+from trivialaugment.common import apply_weightnorm
 
 
 

@@ -4,7 +4,7 @@
 import numpy as np
 import torch
 
-from TrivialAugment import autoaugment, fast_autoaugment
+from trivialaugment import autoaugment, fast_autoaugment
 import aug_lib
 
 

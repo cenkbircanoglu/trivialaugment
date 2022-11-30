@@ -24,11 +24,11 @@ import yaml
 from theconf import Config as C, ConfigArgumentParser
 from argparse import ArgumentParser
 
-from TrivialAugment.common import get_logger
-from TrivialAugment.data import get_dataloaders
-from TrivialAugment.lr_scheduler import adjust_learning_rate_resnet
-from TrivialAugment.metrics import accuracy, Accumulator
-from TrivialAugment.networks import get_model, num_class
+from trivialaugment.common import get_logger
+from trivialaugment.data import get_dataloaders
+from trivialaugment.lr_scheduler import adjust_learning_rate_resnet
+from trivialaugment.metrics import accuracy, Accumulator
+from trivialaugment.networks import get_model, num_class
 from warmup_scheduler import GradualWarmupScheduler
 import aug_lib
 
@@ -134,7 +134,7 @@ def train_and_eval(rank, worldsize, tag, dataroot, test_ratio=0.0, cv_fold=0, re
         reporter = lambda **kwargs: 0
 
     if not tag or (worldsize and torch.distributed.get_rank() > 0):
-        from TrivialAugment.metrics import SummaryWriterDummy as SummaryWriter
+        from trivialaugment.metrics import SummaryWriterDummy as SummaryWriter
         logger.warning('tag not provided or rank > 0 -> no tensorboard log.')
     else:
         from tensorboardX import SummaryWriter

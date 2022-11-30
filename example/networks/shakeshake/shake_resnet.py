@@ -5,8 +5,8 @@ import math
 import torch.nn as nn
 import torch.nn.functional as F
 
-from TrivialAugment.networks.shakeshake.shakeshake import ShakeShake
-from TrivialAugment.networks.shakeshake.shakeshake import Shortcut
+from trivialaugment.networks.shakeshake.shakeshake import ShakeShake
+from trivialaugment.networks.shakeshake.shakeshake import Shortcut
 
 
 class ShakeBlock(nn.Module):

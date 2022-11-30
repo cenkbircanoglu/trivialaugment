@@ -13,11 +13,11 @@ from torchvision.transforms import transforms
 from sklearn.model_selection import StratifiedShuffleSplit
 from theconf import Config as C
 
-from TrivialAugment.augmentations import *
-from TrivialAugment.common import get_logger, copy_and_replace_transform, stratified_split, denormalize
-from TrivialAugment.imagenet import ImageNet
+from trivialaugment.augmentations import *
+from trivialaugment.common import get_logger, copy_and_replace_transform, stratified_split, denormalize
+from trivialaugment.imagenet import ImageNet
 
-from TrivialAugment.augmentations import Lighting
+from trivialaugment.augmentations import Lighting
 
 logger = get_logger('TrivialAugment')
 logger.setLevel(logging.INFO)
